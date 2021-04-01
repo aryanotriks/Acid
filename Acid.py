@@ -49,8 +49,8 @@ idh = []
 def logmen():
     os.system('clear')
     print logo
-    print ' [1] Login Token'
-    print ' [\x1b[91m0\x1b[0m] Gajadi Pake'
+    print ' [1] Login With Token'
+    print ' [\x1b[91m0\x1b[0m] Exit'
     pilog()
 def pilog():
     og = raw_input("\nZKI: ")
