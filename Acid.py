@@ -33,24 +33,44 @@ def acak(b):
         d += '!'+w[random.randint(0,len(w)-1)]+i
         return cetak(d)
         
+#### colours ####
+B='\033[1;94m'
+R='\033[1;91m'
+G='\033[1;92m'
+W='\033[1;97m'
+S='\033[1;96m'
+P='\033[1;95m'
+Y='\033[1;93m'
 
-
-logo = ''' 
-┏━━━━┓━━━┓┓┏━┓━━━┓━━━┓┓━━┏┓━━━┓
-┗━━┓━┃┏━┓┃┃┃┏┛┏━┓┃┏━┓┃┗┓┏┛┃┏━┓┃
-━━┏┛┏┛┃━┃┃┗┛┛━┃━┃┃┗━┛┃┓┗┛┏┛┃━┃┃
-━┏┛┏┛━┗━┛┃┏┓┃━┗━┛┃┏┓┏┛┗┓┏┛━┗━┛┃
-┏┛━┗━┓┏━┓┃┃┃┗┓┏━┓┃┃┃┗┓━┃┃━━┏━┓┃
-┗━━━━┛┛━┗┛┛┗━┛┛━┗┛┛┗━┛━┗┛━━┛━┗┛
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-'''
+#Dev:4ryan0
+#### LOGO ####
+logo = """                          
+\033[1;94m┏━━━━┓━━━┓┓┏━┓━━━┓━━━┓┓━━┏┓━━━┓
+\033[1;91m┗━━┓━┃┏━┓┃┃┃┏┛┏━┓┃┏━┓┃┗┓┏┛┃┏━┓┃
+\033[1;92m━━┏┛┏┛┃━┃┃┗┛┛━┃━┃┃┗━┛┃┓┗┛┏┛┃━┃┃
+\033[1;97m━┏┛┏┛━┗━┛┃┏┓┃━┗━┛┃┏┓┏┛┗┓┏┛━┗━┛┃
+\033[1;96m┏┛━┗━┓┏━┓┃┃┃┗┓┏━┓┃┃┃┗┓━┃┃━━┏━┓┃
+\033[1;95m┗━━━━┛┛━┗┛┛┗━┛┛━┗┛┛┗━┛━┗┛━━┛━┗┛
+\033[1;93m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  
+	   \033[1;47m \033[1;31m OWNER : XAHEER ABBAS \033[1;0m     
+ \033[1;95m╔═════\033[1;91m⸎══════════════\033[1;91m⸎══════════\033[1;91m⸎════════╗
+ \033[1;95m║\033[1;92mCREATOR ║ \033[1;96m♤͜͡♤ SAYYED ZAKARYA BACHA
+ \033[1;96m║\033[1;92mWHATSAP ║ \033[1;96m♤͜͡♤ +923472860857
+ \033[1;92m║\033[1;92mHELPING ║ \033[1;96m♤͜͡♤ ANY HELP CONTACT ME ON WHATSAPP 
+ \033[1;92m╚═════\033[1;91m⸎══════════════\033[1;91m⸎══════════\033[1;91m⸎════════╝
+  \033[1;94m⊱══════════════════⊱═⊰DISCLAIMER⊱═⊰══════════════════⊰
+ \033[1;91mWARNING :\033[1;93mUSE A FRESH ACCOUNT IF YOU LOGIN WITH FACEBOOK, USE OLD ACCOUDNT IF YOU LOGIN WITH TOKEN.
+ \033[1;97mWIFI OR MOBILE DATA :\033[1;93mONLY MOBILE DATA USE FOR CLONING , WIFI USER CONNECT ANY PROXY.
+ \033[1;97mID NOT FOUND PROBLEM :\033[1;93mCOPY TO PROFILE PHOTO USERNAME AND THEN PASTE IN TERMUX.
+ \033[1;91mMEHTOD LOGIN OLD ACCOUNT :\033[1;93mFIRST DOWNLOAD TOKEN APP AND OLD FACEBOOK ACCOUNT LOGIN IN TOKEN, YOU WILL SHOW CODE, COPY CODE AND TYPE 2 AND PASTE CODE AND LOGIN OLD ACCOUNT SUCCESSFULLY.
+"""
 idh = []
 
 def logmen():
     os.system('clear')
     print logo
-    print ' [1] Login With Token'
-    print ' [\x1b[91m0\x1b[0m] Exit'
+    print ' [1] Login Token'
+    print ' [\x1b[91m0\x1b[0m] Exit Tool'
     pilog()
 def pilog():
     og = raw_input("\nZKI: ")
@@ -60,7 +80,7 @@ def pilog():
         print 
         print ("Login Token").center(50)
         print
-        print ("Aurher    :  Sayyed Zakarya")
+        print ("Auther    :  Sayyed Zakarya")
         print('')
         print ("YouTube   :  Aryano Tricks")
         print('')
@@ -91,7 +111,7 @@ def menu():
         token = open(".logfuck.txt","r").read()
     except IOError:
         print logo
-        print("[!] Kesalahan Token. Token Tidak Ditemukan")
+        print("[!] token error. token not found")
         os.system("rm -rf .logfuck.txt")
         time.sleep(1)
         logmen()
@@ -108,11 +128,11 @@ def menu():
         logmen()
     os.system("clear")
     print logo
-    print("Selamat Datang "+name)
-    print ("Silahkan Pilih")
+    print("Welcome "+name)
+    print ("Please select")
     print
     print("[1] Start Cracking")
-    print("[\x1b[91m0\x1b[0m] Keluar")
+    print("[\x1b[91m0\x1b[0m] Exit")
     pil()
     
 def pil():
@@ -121,7 +141,7 @@ def pil():
         cramen()
     elif ti =='0':
         os.system('rm -rf .logfuck.txt')
-        print '[√] Menghapus Token Berhasil.'
+        print '[√] Deleting Token Successfully.'
         time.sleep(1)
         os.system('exit')
         logmen()
@@ -135,7 +155,7 @@ def cramen():
 	try:
 		token=open(".logfuck.txt","r").read()
 	except IOError:
-		print("[!] Kesalahan Token . Token Tidak Berfungsi")
+		print("[!] Token Error. Token Not Working")
 		os.system("rm -rf .logfuck.txt")
 		time.sleep(1)
 		logmen()
@@ -171,7 +191,7 @@ def crapil():
 			q = json.loads(r.text)
 			print("[✓] Name : "+q["name"])
 		except KeyError:
-			print('\n[!] Fb ID . ID : '+idt+' Teman Tidak Public')
+			print('\n[!] Fb ID . ID : '+idt+' Friends Not Public')
 			raw_input("\nBack ")
 			cramen()
 		r = requests.get("https://graph.facebook.com/"+idt+"/friends?access_token="+token, headers=header)
