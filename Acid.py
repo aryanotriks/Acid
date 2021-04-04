@@ -52,10 +52,15 @@ logo = """
 \033[1;96m┏┛━┗━┓┏━┓┃┃┃┗┓┏━┓┃┃┃┗┓━┃┃━━┏━┓┃
 \033[1;95m┗━━━━┛┛━┗┛┛┗━┛┛━┗┛┛┗━┛━┗┛━━┛━┗┛
 \033[1;93m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  
-	   \033[1;47m \033[1;31m OWNER : SAYYED ZAKARYA \033[1;0m     
- \033[1;94m⊱══════════════════⊱═⊰DISCLAIMER⊱═⊰══════════════════⊰
- \033[1;93mWARNING :\033[1;93mUSE A FRESH ACCOUNT IF YOU LOGIN WITH FACEBOOK, USE OLD ACCOUDNT IF YOU LOGIN WITH TOKEN.
- \033[1;92mWIFI OR MOBILE DATA :\033[1;93mONLY MOBILE DATA USE FOR CLONING , WIFI USER CONNECT ANY PROXY.
+	   \033[1;47m \033[1;31m OWNER : XAHEER ABBAS \033[1;0m     
+ \033[1;95m╔═════\033[1;91m⸎══════════════\033[1;91m⸎══════════\033[1;91m⸎════════╗
+ \033[1;95m║\033[1;92mCREATOR ║ \033[1;96m♤͜͡♤ SAYYED ZAKARYA BACHA
+ \033[1;96m║\033[1;92mWHATSAP ║ \033[1;96m♤͜͡♤ +923472860857
+ \033[1;92m║\033[1;92mHELPING ║ \033[1;96m♤͜͡♤ ANY HELP CONTACT ME ON WHATSAPP 
+ \033[1;92m╚═════\033[1;91m⸎══════════════\033[1;91m⸎══════════\033[1;91m⸎════════╝
+  \033[1;94m⊱══════════════════⊱═⊰DISCLAIMER⊱═⊰══════════════════⊰
+ \033[1;91mWARNING :\033[1;93mUSE A FRESH ACCOUNT IF YOU LOGIN WITH FACEBOOK, USE OLD ACCOUDNT IF YOU LOGIN WITH TOKEN.
+ \033[1;97mWIFI OR MOBILE DATA :\033[1;93mONLY MOBILE DATA USE FOR CLONING , WIFI USER CONNECT ANY PROXY.
  \033[1;97mID NOT FOUND PROBLEM :\033[1;93mCOPY TO PROFILE PHOTO USERNAME AND THEN PASTE IN TERMUX.
  \033[1;91mMEHTOD LOGIN OLD ACCOUNT :\033[1;93mFIRST DOWNLOAD TOKEN APP AND OLD FACEBOOK ACCOUNT LOGIN IN TOKEN, YOU WILL SHOW CODE, COPY CODE AND TYPE 2 AND PASTE CODE AND LOGIN OLD ACCOUNT SUCCESSFULLY.
 """
@@ -72,14 +77,6 @@ def pilog():
     if og =="1":
         os.system("clear")
         print logo
-        print 
-        print ("Login Token").center(50)
-        print
-        print ("Auther    :  Sayyed Zakarya")
-        print('')
-        print ("YouTube   :  Aryano Tricks")
-        print('')
-        print ("Facebook  :  Sayyed Zakarya Bacha ")
         print 
         token = raw_input("[+] Past Your Token Here : ")
         sav = open(".logfuck.txt","w")
@@ -117,7 +114,7 @@ def menu():
     except KeyError:
         os.system("clear")
         print logo
-        print("[!] Sorry Your Account Is On Checkpoint")
+        print("[!] Failed To Load. Your Checkpoint account")
         os.system("rm -rf .logfuck.txt")
         time.sleep(1)
         logmen()
@@ -131,7 +128,7 @@ def menu():
     pil()
     
 def pil():
-    ti = raw_input('\nZKI: ')
+    ti = raw_input('\nSelect: ')
     if ti =='1':
         cramen()
     elif ti =='0':
