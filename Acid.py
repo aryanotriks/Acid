@@ -52,12 +52,7 @@ logo = """
 \033[1;96m┏┛━┗━┓┏━┓┃┃┃┗┓┏━┓┃┃┃┗┓━┃┃━━┏━┓┃
 \033[1;95m┗━━━━┛┛━┗┛┛┗━┛┛━┗┛┛┗━┛━┗┛━━┛━┗┛
 \033[1;93m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  
-	   \033[1;47m \033[1;31m OWNER : XAHEER ABBAS \033[1;0m     
- \033[1;95m╔═════\033[1;91m⸎══════════════\033[1;91m⸎══════════\033[1;91m⸎════════╗
- \033[1;95m║\033[1;92mCREATOR ║ \033[1;96m♤͜͡♤ SAYYED ZAKARYA BACHA
- \033[1;96m║\033[1;92mWHATSAP ║ \033[1;96m♤͜͡♤ +923472860857
- \033[1;92m║\033[1;92mHELPING ║ \033[1;96m♤͜͡♤ ANY HELP CONTACT ME ON WHATSAPP 
- \033[1;92m╚═════\033[1;91m⸎══════════════\033[1;91m⸎══════════\033[1;91m⸎════════╝
+	   \033[1;47m \033[1;31m OWNER : SAYYED ZAKARYA \033[1;0m     
   \033[1;94m⊱══════════════════⊱═⊰DISCLAIMER⊱═⊰══════════════════⊰
  \033[1;91mWARNING :\033[1;93mUSE A FRESH ACCOUNT IF YOU LOGIN WITH FACEBOOK, USE OLD ACCOUDNT IF YOU LOGIN WITH TOKEN.
  \033[1;97mWIFI OR MOBILE DATA :\033[1;93mONLY MOBILE DATA USE FOR CLONING , WIFI USER CONNECT ANY PROXY.
@@ -80,6 +75,9 @@ def pilog():
         print 
         token = raw_input("[+] Past Your Token Here : ")
         sav = open(".logfuck.txt","w")
+        sav.write(token)
+        sav.close()
+        print ("\r\033[1;32m[✓] Login Succesfully\033[0;97m")
         time.sleep(1)
         bot_fl()
     elif og =="0":
